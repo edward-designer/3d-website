@@ -11,7 +11,7 @@ export const scrollAnimation = (position, target, isMobile, onUpdate) => {
       trigger: ".sound-section",
       start: "top bottom",
       end: "top top",
-      scrub: 1,
+      scrub: true,
       immediateRender: false,
     },
     onUpdate,
@@ -24,7 +24,8 @@ export const scrollAnimation = (position, target, isMobile, onUpdate) => {
         trigger: ".sound-section",
         start: "top bottom",
         end: "top top",
-        scrub: 1,
+        scrub: true,
+        immediateRender: false,
       },
     })
     .to(".sound-section-content", {
@@ -33,7 +34,7 @@ export const scrollAnimation = (position, target, isMobile, onUpdate) => {
         trigger: ".sound-section",
         start: "top bottom",
         end: "top top",
-        scrub: 1,
+        scrub: true,
       },
     })
     .to(position, {
@@ -44,7 +45,7 @@ export const scrollAnimation = (position, target, isMobile, onUpdate) => {
         trigger: ".display-section",
         start: "top bottom",
         end: "top top",
-        scrub: 1,
+        scrub: true,
         immediateRender: false,
       },
       onUpdate,
@@ -57,7 +58,7 @@ export const scrollAnimation = (position, target, isMobile, onUpdate) => {
         trigger: ".display-section",
         start: "top bottom",
         end: "top top",
-        scrub: 1,
+        scrub: true,
         immediateRender: false,
       },
     })
@@ -67,7 +68,7 @@ export const scrollAnimation = (position, target, isMobile, onUpdate) => {
         trigger: ".display-section",
         start: "top bottom",
         end: "top top",
-        scrub: 2,
+        scrub: true,
         immediateRender: false,
       },
     });

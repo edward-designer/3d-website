@@ -5,6 +5,7 @@ import Jumbotron from "./components/Jumbotron";
 import SoundSection from "./components/SoundSection";
 import DisplaySection from "./components/DisplaySection";
 import WebgiViewer from "./components/WebgiViewer";
+import Loader from "./components/Loader";
 
 function App() {
   const soundDivRef = useRef(null);
@@ -30,6 +31,7 @@ function App() {
 
   return (
     <div className="App">
+      <Loader />
       <div id="content" ref={contentRef}>
         <Nav />
         <Jumbotron scrollTo={scrollTo(soundDivRef)} />
