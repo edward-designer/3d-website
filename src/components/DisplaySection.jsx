@@ -1,6 +1,6 @@
 import { forwardRef } from "react";
 
-const DisplaySection = forwardRef(function DisplaySection(props, ref) {
+const DisplaySection = forwardRef(({ triggerPreview }, ref) => {
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
@@ -8,6 +8,7 @@ const DisplaySection = forwardRef(function DisplaySection(props, ref) {
       behavior: "smooth",
     });
   };
+
   return (
     <div className="display-section wrapper" ref={ref}>
       <h2 className="title">New</h2>
@@ -17,7 +18,7 @@ const DisplaySection = forwardRef(function DisplaySection(props, ref) {
       </span>
       <ul className="links">
         <li>
-          <button className="button" type="button">
+          <button className="button" type="button" onClick={triggerPreview}>
             Try me!
           </button>
         </li>

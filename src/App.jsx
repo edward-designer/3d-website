@@ -9,6 +9,8 @@ import WebgiViewer from "./components/WebgiViewer";
 function App() {
   const soundDivRef = useRef(null);
   const displayDivRef = useRef(null);
+  const webgiViewerRef = useRef(null);
+  const contentRef = useRef(null);
 
   const scrollTo = (ref) => () => {
     const element = ref.current;
@@ -22,13 +24,19 @@ function App() {
     });
   };
 
+  const handlePreview = () => {
+    webgiViewerRef.current.triggerPreview();
+  };
+
   return (
     <div className="App">
-      <Nav />
-      <Jumbotron scrollTo={scrollTo(soundDivRef)} />
-      <SoundSection scrollTo={scrollTo(displayDivRef)} ref={soundDivRef} />
-      <DisplaySection ref={displayDivRef} />
-      <WebgiViewer />
+      <div id="content" ref={contentRef}>
+        <Nav />
+        <Jumbotron scrollTo={scrollTo(soundDivRef)} />
+        <SoundSection scrollTo={scrollTo(displayDivRef)} ref={soundDivRef} />
+        <DisplaySection ref={displayDivRef} triggerPreview={handlePreview} />
+      </div>
+      <WebgiViewer contentRef={contentRef} ref={webgiViewerRef} />
     </div>
   );
 }

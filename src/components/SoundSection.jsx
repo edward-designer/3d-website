@@ -1,6 +1,6 @@
 import { forwardRef } from "react";
 
-const SoundSection = forwardRef(function SoundSection({ scrollTo }, ref) {
+const SoundSection = forwardRef(({ scrollTo }, ref) => {
   return (
     <div className="sound-section wrapper" ref={ref}>
       <div className="body">
