@@ -3,7 +3,7 @@ import React from "react";
 import Iphone from "../assets/images/iphone-14.jpg";
 import HoldingIphone from "../assets/images/iphone-hand.png";
 
-const Jumbotron = ({ scrollToSound }) => {
+const Jumbotron = ({ scrollTo }) => {
   return (
     <div className="jumbotron-section wrapper">
       <h2 className="title">New</h2>
@@ -19,7 +19,7 @@ const Jumbotron = ({ scrollToSound }) => {
           </button>
         </li>
         <li>
-          <a className="link" onClick={scrollToSound}>
+          <a className="link" onClick={scrollTo}>
             Learn more
           </a>
         </li>

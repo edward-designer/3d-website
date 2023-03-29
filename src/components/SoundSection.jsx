@@ -1,6 +1,6 @@
 import { forwardRef } from "react";
 
-const SoundSection = forwardRef(function SoundSection(props, ref) {
+const SoundSection = forwardRef(function SoundSection({ scrollTo }, ref) {
   return (
     <div className="sound-section wrapper" ref={ref}>
       <div className="body">
@@ -17,7 +17,7 @@ const SoundSection = forwardRef(function SoundSection(props, ref) {
               </button>
             </li>
             <li>
-              <a href="/" className="link">
+              <a className="link" onClick={scrollTo}>
                 Learn more
               </a>
             </li>
